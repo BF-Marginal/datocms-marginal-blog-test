@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <div v-for="post in posts.slice(0, 2)" v-bind:key="post.slug">
+          <div v-for="post in posts.slice(0, 3)" v-bind:key="post.slug">
             <div class="columns">
               <div class="column is-8 is-offset-2">
                 <figure class="image">
@@ -90,7 +90,7 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
-                    <h3>{{ post.author }}</h3>
+                    <h6>{{ post.author.name }}</h6>
                     <div class="has-text-dark" v-html="post.excerpt" />
                   </div>
                 </div>
