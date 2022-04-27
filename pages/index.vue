@@ -54,9 +54,7 @@
                       />
                     </div>
                     <div class="control">
-                      <a class="button is-info">
-                        Subscribe
-                      </a>
+                      <a class="button is-info"> Subscribe </a>
                     </div>
                   </div>
                 </div>
@@ -69,7 +67,7 @@
 
     <!-- Articles -->
 
-    <section class="hero ">
+    <section class="hero">
       <div class="hero-body">
         <div class="container">
           <div
@@ -92,6 +90,7 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
+                    <h3>{{ post.author }}</h3>
                     <div class="has-text-dark" v-html="post.excerpt" />
                   </div>
                 </div>
@@ -147,7 +146,7 @@ export default {
 
         ${imageFields}
         ${seoMetaTagsFields}
-      `
+      `,
     })
 
     return { ready: !!data, ...data }
@@ -155,7 +154,7 @@ export default {
   methods: {
     formatDate(date) {
       return format(parseISO(date), 'PPP')
-    }
+    },
   },
   head() {
     if (!this.ready) {
@@ -163,6 +162,6 @@ export default {
     }
 
     return toHead(this.site.favicon)
-  }
+  },
 }
 </script>
