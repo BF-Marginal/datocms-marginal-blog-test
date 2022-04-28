@@ -90,7 +90,9 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
-                    <img :src="post.author.picture.src">
+                    <figure class="image">
+                      <datocms-image :data="post.author.picture.src" />
+                    </figure>
                     <h6>{{ post.author.name }}</h6>
                     <div class="has-text-dark" v-html="post.excerpt" />
                   </div>
