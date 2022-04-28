@@ -90,7 +90,7 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
-                    <figure class="image">
+                    <figure class="image" style="width:80px;margin:5px">
                       <datocms-image :data="post.author.picture.responsiveImage" />
                     </figure>
                     <h6>{{ post.author.name }}</h6>
@@ -139,7 +139,7 @@ export default {
             author {
               name
               picture {
-                responsiveImage(imgixParams: { fit: crop, ar: "1:1", w: 40 }) {
+                responsiveImage(imgixParams: { fit: crop, ar: "1:1", w: 80 }) {
                   ...imageFields
                 }
               }
