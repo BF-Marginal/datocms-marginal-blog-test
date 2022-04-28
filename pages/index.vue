@@ -90,6 +90,7 @@
                         post.title
                       }}</nuxt-link>
                     </h1>
+                    <img :src="post.author.picture.src">
                     <h6>{{ post.author.name }}</h6>
                     <div class="has-text-dark" v-html="post.excerpt" />
                   </div>
